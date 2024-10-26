@@ -1,3 +1,9 @@
+Тестове завдання для React Developer ![](https://docs.google.com/document/d/1TV_hGp2zbnVVPqA4-dXi3XEcYJIXufBbCZU7aBLVZCw/edit?tab=t.0#heading=h.alwt8822wdq4)
+Список героїв: Використовуючи API ![](https://sw-api.starnavi.io)
+
+
+
+
 ![](https://github.com/xyflow/web/blob/main/assets/codesandbox-header-ts.png?raw=true)
 
 # React Flow starter (Vite + TS)

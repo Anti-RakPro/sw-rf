@@ -35,32 +35,50 @@ export default function App() {
 
     useEffect(() => {
         const fetchCharacters = async () => {
-            const response = await fetch('http https://sw-api.starnavi.io/people');
+            const response = await fetch('https://sw-api.starnavi.io/people/');
 
             if (!response.ok) {
-                throw new Error('Something went wrong');
+                throw new Error('Network response was not ok');
             }
 
             const responseData = await response.json()
-            console.log('1', responseData)
-
 
             const allCharacters = []
+            // console.log(responseData.results)
+            for (const people of responseData.results) {
 
-            for (const key in responseData) {
-                console.log('1', key)
+                // console.log(people)
                 allCharacters.push({
-                    id: key,
+                    name: people.name,
                     // name: responseData[key].name,
                     // description: responseData[key].description,
                     // price: responseData[key].price,
                 })
             }
+            // console.log(allCharacters)
             setCharacters(allCharacters)
+            // return allCharacters
         }
 
-        console.log('1')
+        // const fetchData = async () => {
+        //     try {
+        //         const response = await fetch('http https://sw-api.starnavi.io/people/fgafdza');
+        //
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //
+        //         const data = await response.json();
+        //         console.log('Fetched data:', data); // Log the fetched data here
+        //     } catch (error) {
+        //         console.error('Fetch error:', error);
+        //     }
+        // };
+        //
+        // fetchData();
+
         fetchCharacters().catch(error => {
+            console.error('Fetch error:', error);
             setIsLoading(false)
             setHttpError(error.massage)
         })
@@ -77,7 +95,7 @@ export default function App() {
             onConnect={onConnect}
             fitView
         >
-            <Background/>
+            <Background color={'white'} bgColor={'black'}/>
             <MiniMap/>
             <Controls/>
         </ReactFlow>

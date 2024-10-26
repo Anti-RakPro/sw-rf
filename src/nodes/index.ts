@@ -22,7 +22,7 @@ export const initialNodes: AppNode[] = [
     id: 'e',
     type: 'output',
     position: { x: 50, y: 250 },
-    data: { label: 'lorem' },
+    data: { label: 'lorem bla bla' },
   },
 ];
 
