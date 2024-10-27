@@ -1,4 +1,5 @@
 .sideBarBlock {
+    box-sizing: border-box;
     width: 200px;
     height: 100%;
     position: absolute;
@@ -8,6 +9,17 @@
     background-color: gray;
     z-index: 5;
     padding: 5px;
+    transition: left 0.7s ease;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+}
+
+.sideBar-hidden{
+    /*transition: left 0.5s ease;*/
+    left: -200px;
+
 }
 .sideBarBtn{
     cursor: pointer;
@@ -15,11 +27,17 @@
     height: 10px;
     padding: 15px;
     position: absolute;
-    top: 10px;
+    top: 30px;
     right: -60px;
     background-color: gray;
     border-radius: 45%;
     /*z-index: 4;*/
+}
+
+.sideBarBtn:hover{
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+
 }
 
 .arrow {
@@ -31,14 +49,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(135deg);
+    transition: transform 0.7s ease;
 }
 
 .right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: transform 0.7s ease;
 }
 
 .left {
     transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
 }

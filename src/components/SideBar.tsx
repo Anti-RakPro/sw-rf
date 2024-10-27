@@ -1,16 +1,28 @@
-import { useState } from 'react';
+import classNames from "classnames";
+import {useState} from 'react';
 import styles from './SideBar.module.css'
 
-function SideBar (){
+function SideBar() {
 
-    const [isToggleSideBar, setToggleSideBar] = useState(true);
+    const [isToggleSideBar, setToggleSideBar] = useState(false);
 
-    function handleToggle(){isToggleSideBar? styles['left']: styles['right']}
+    function handleToggle() {
+        setToggleSideBar(!isToggleSideBar)
+    }
 
+
+    // classNames(styles['sideBarBtn'], {`${styles['right']}`: isToggleSideBar})
     return (
-        <div className={styles['sideBarBlock']}>
-            <div className={styles['sideBarBtn']}>
-                <i className={styles['arrow']}></i>
+        <div className={classNames(
+            styles['sideBarBlock'],
+            isToggleSideBar && styles['sideBar-hidden']
+        )}>
+            <div className={styles['sideBarBtn']}
+                 onClick={handleToggle}>
+                <i className={classNames(
+                    styles['arrow'],
+                    isToggleSideBar && styles['right']
+                )}></i>
             </div>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, voluptate.</p>
         </div>
