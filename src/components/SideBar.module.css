@@ -12,16 +12,14 @@
     transition: left 0.7s ease;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
-
-
 }
 
-.sideBar-hidden{
+.sideBar-hidden {
     /*transition: left 0.5s ease;*/
     left: -200px;
-
 }
-.sideBarBtn{
+
+.sideBarBtn {
     cursor: pointer;
     width: 10px;
     height: 10px;
@@ -34,15 +32,15 @@
     /*z-index: 4;*/
 }
 
-.sideBarBtn:hover{
+.sideBarBtn:hover {
     transition: transform 0.2s ease;
     transform: scale(1.1);
 
 }
 
 .arrow {
-    border: solid ;
-    border-width: 0 3px 3px 0 ;
+    border: solid;
+    border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
     position: absolute;
@@ -57,6 +55,53 @@
     transition: transform 0.7s ease;
 }
 
-.left {
-    transform: rotate(135deg);
+.sideBarModSwitch {
+
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: gray;
+    /*border: 1px solid black;*/
+}
+
+.sideBarModSwitch > button {
+    height: 100%;
+    font-size: 16px;
+    min-width: 60px;
+    background-color: darkgrey;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.sideBarModSwitch > button:hover {
+    background: linear-gradient(145deg, #6495ed, #5a86d8);
+}
+
+.sideBarModSwitchActive {
+    background: linear-gradient(145deg, #6495ed, #5a86d8);
+    box-shadow: 0 2px #4c72b0;
+}
+
+.sideBarContent {
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+.sideBarContent > div {
+    position: relative;
+    min-width: 100%;
+    transition: left 0.5s ease;
+    left: 0;
+    top: 0;
+}
+
+.sideBarContentPosition {
+    left: -187px !important;
 }
