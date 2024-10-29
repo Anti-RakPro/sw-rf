@@ -15,8 +15,16 @@
 }
 
 .sideBar-hidden {
-    /*transition: left 0.5s ease;*/
     left: -200px;
+}
+
+.searchElement{
+    width: 100%;
+}
+
+.searchElement > button{
+    padding: 0 2px;
+    margin: 0 2px;
 }
 
 .sideBarBtn {
@@ -26,9 +34,10 @@
     padding: 15px;
     position: absolute;
     top: 30px;
-    right: -60px;
+    right: -50px;
     background-color: gray;
     border-radius: 45%;
+    border: 3px solid white;
     /*z-index: 4;*/
 }
 

@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import {useState} from 'react';
 import styles from './SideBar.module.css'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSearch} from "@fortawesome/free-solid-svg-icons/faSearch";
 
 function SideBar() {
 
@@ -22,10 +24,10 @@ function SideBar() {
             isToggleSideBar && styles['sideBar-hidden']
         )}>
             <h3>Star Wars Characters </h3>
-            <div>
-                <input/>
+            <div className={styles['searchElement']}>
+                <input placeholder={"Name"}/>
                 <button>
-                    <FontAwesomeIcon icon="fas fa-search" />
+                    <FontAwesomeIcon icon={faSearch} />
                 </button>
             </div>
 
